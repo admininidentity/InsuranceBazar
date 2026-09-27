@@ -253,7 +253,7 @@ export default function App() {
                     ))
                   ) : (
                     <tr>
-                      <td colSpan={5} className="px-6 py-12 text-center">
+                      <td colSpan={8} className="px-6 py-12 text-center">
                         <div className="flex flex-col items-center gap-2">
                           <Search className="w-8 h-8 text-slate-300" />
                           <p className="text-slate-500 font-medium">No matching records found</p>
