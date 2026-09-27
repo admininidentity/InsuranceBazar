@@ -179,14 +179,14 @@ export default function App() {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200">
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Customer ID</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Identity Holder</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Date of Birth</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Aadhaar Number</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">PAN Number</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Mobile Number</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"></th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Customer ID</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Identity Holder</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Date of Birth</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Aadhaar Number</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">PAN Number</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Mobile Number</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap">Status</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 whitespace-nowrap"></th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -201,54 +201,54 @@ export default function App() {
                         key={record.id} 
                         className="hover:bg-slate-50/50 transition-colors group"
                       >
-                        <td className="px-6 py-4">
+                     <td className="px-6 py-4 whitespace-nowrap">
                           <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-1 rounded-md border border-indigo-100">
                             {record.customerId}
                           </span>
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-3">
-                            <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold text-xs">
+                            <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 font-bold text-xs flex-shrink-0">
                               {record.name.split(' ').map(n => n[0]).join('')}
                             </div>
                             <div>
-                              <p className="text-sm font-semibold text-slate-900">{record.name}</p>
-                              <p className="text-xs text-slate-500">{record.email}</p>
+                              <p className="text-sm font-semibold text-slate-900 whitespace-nowrap">{record.name}</p>
+                              <p className="text-xs text-slate-500 whitespace-nowrap">{record.email}</p>
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-slate-400" />
-                            <span className="text-sm text-slate-600">{record.dob}</span>
+                            <Calendar className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                            <span className="text-sm text-slate-600 whitespace-nowrap">{record.dob}</span>
                           </div>
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-2">
-                            <IdCard className="w-4 h-4 text-slate-400" />
-                            <span className="text-sm font-mono text-slate-600 tracking-wider">{record.aadhar}</span>
+                            <IdCard className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                            <span className="text-sm font-mono text-slate-600 tracking-wider whitespace-nowrap">{record.aadhar}</span>
                           </div>
                         </td>
-                         <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-2">
-                            <CreditCard className="w-4 h-4 text-slate-400" />
-                            <span className="text-sm font-mono text-slate-600 tracking-wider uppercase">{record.pan}</span>
+                            <CreditCard className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                            <span className="text-sm font-mono text-slate-600 tracking-wider uppercase whitespace-nowrap">{record.pan}</span>
                           </div>
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <div className="flex items-center gap-2">
-                            <Phone className="w-4 h-4 text-slate-400" />
+                            <Phone className="w-4 h-4 text-slate-400 flex-shrink-0" />
                             <span className="text-sm font-mono text-slate-600 tracking-wider whitespace-nowrap">{record.phone}</span>
                           </div>
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 whitespace-nowrap">
                           <StatusBadge status={record.status} />
                         </td>
-                        <td className="px-6 py-4 text-right">
+                        <td className="px-6 py-4 text-right whitespace-nowrap">
                           <button className="p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-lg transition-all">
                             <MoreVertical className="w-4 h-4" />
                           </button>
-                        </td>
+                        </td>                   
                       </motion.tr>
                     ))
                   ) : (
