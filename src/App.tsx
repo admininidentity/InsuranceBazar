@@ -53,7 +53,9 @@ export default function App() {
       const matchesSearch = 
         item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.customerId.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.aadhar.includes(searchQuery);
+        item.aadhar.includes(searchQuery) ||
+        item.pan.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.phone.includes(searchQuery);
       
       const matchesFilter = filterStatus === 'All' || item.status === filterStatus;
       
@@ -145,7 +147,7 @@ export default function App() {
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input 
               type="text" 
-              placeholder="Search by name, ID, Aadhaar or PAN..." 
+              placeholder="Search by name, ID, Aadhaar or PAN or Phone..." 
               className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -181,6 +183,8 @@ export default function App() {
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Identity Holder</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Date of Birth</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Aadhaar Number</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">PAN Number</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Mobile Number</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500">Status</th>
                   <th className="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500"></th>
                 </tr>
