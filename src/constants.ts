@@ -11,7 +11,7 @@ export interface IdentityRecord {
 }
 
 export const SAMPLE_DATA: IdentityRecord[] = [
-{ id: '1', customerId: 'FS-1001', name: 'Arjun Sharma', dob: '12/05/1985', aadhar: '2850 6014 1728', pan: 'BAJPC4350M', phone: '+91 98724 90783', email: 'arjun.s@example.com', status: 'Verified' },
+{ id: '1', customerId: 'FS-1001', name: 'Arjun Sharma', dob: '12/05/1985', aadhar: '2850 6014 1728', pan: 'BAJPC4350M', phone: '+91 9872490783', email: 'arjun.s@example.com', status: 'Verified' },
   { id: '2', customerId: 'FS-1002', name: 'Priya Patel', dob: '22/08/1992', aadhar: '2032 0320 0566', pan: 'DAJPC4150P', phone: '+91 9762905382', email: 'priya.p@example.com', status: 'Verified' },
   { id: '3', customerId: 'FS-1003', name: 'Rahul Verma', dob: '05/11/1988', aadhar: '2514 9575 5785', pan: 'XGZFE7225A', phone: '+91 9676582779', email: 'rahul.v@example.com', status: 'Pending' },
   { id: '4', customerId: 'FS-1004', name: 'Ananya Iyer', dob: '14/02/1995', aadhar: '2618 9284 9130', pan: 'CTUGE1616I', phone: '+91 9596897373', email: 'ananya.i@example.com', status: 'Verified' },
