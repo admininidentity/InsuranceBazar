@@ -229,6 +229,18 @@ export default function App() {
                             <span className="text-sm font-mono text-slate-600 tracking-wider">{record.aadhar}</span>
                           </div>
                         </td>
+                         <td className="px-6 py-4">
+                          <div className="flex items-center gap-2">
+                            <CreditCard className="w-4 h-4 text-slate-400" />
+                            <span className="text-sm font-mono text-slate-600 tracking-wider uppercase">{record.pan}</span>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex items-center gap-2">
+                            <Phone className="w-4 h-4 text-slate-400" />
+                            <span className="text-sm font-mono text-slate-600 tracking-wider whitespace-nowrap">{record.phone}</span>
+                          </div>
+                        </td>
                         <td className="px-6 py-4">
                           <StatusBadge status={record.status} />
                         </td>
